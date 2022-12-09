@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
 * * main - main block
 * * Print the alphabet on a line omitting e and q
@@ -9,6 +8,7 @@
 int main(void)
 {
 	char alpha = 'a';
+
 	while (alpha <= 'z')
 {
 	putchar(alpha);
