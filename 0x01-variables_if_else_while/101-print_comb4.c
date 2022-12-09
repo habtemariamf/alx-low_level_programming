@@ -10,6 +10,7 @@
 * * You can only use `putchar` to print to console.
 * * You can only use `putchar` up to 6 times.
 * * You are not allowed to use any variables of type `char`.
+* * Return: 0
 */
 int main(void)
 
