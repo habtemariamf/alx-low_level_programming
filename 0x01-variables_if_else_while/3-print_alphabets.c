@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * * main - main block
  * * Print the alphabet in lowercase and uppercase on same line
@@ -10,12 +9,14 @@
 int main(void)
 {
 	char alpha = 'a';
+
 	while (alpha <= 'z')
 {
 	putchar(alpha);
 	alpha++;
 }
 	alpha = 'A';
+
 	while (alpha <= 'Z')
 	{
 	putchar(alpha);
