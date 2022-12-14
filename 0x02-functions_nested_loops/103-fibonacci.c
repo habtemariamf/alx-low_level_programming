@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	int f1, f2, i, q, b;
+	int f1, f2, f3, i, a, b;
 
 	i = 1;
 	f1 = 1;
@@ -22,7 +22,7 @@ int main(void)
 		f2 = f3;
 		if (f3 % b == 0)
 		{
-			a = a +f3;
+			a = a + f3;
 		}
 	}
 	printf("%d\n", a);
