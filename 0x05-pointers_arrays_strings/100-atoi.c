@@ -2,31 +2,38 @@
 #include <stdio.h>
 /**
 * _atoi - converts a string to an integer.
-* @s: the string to convert
-* Return: the converted string.
+* @s: pointer to string.
+* Return: integer gotten.
 */
 int _atoi(char *s)
 {
-	short boolean;
-	int i, minus, result;
+	int index, ind2;
+	unsigned int res;
+	int sign = 1;
+	char now;
 
-	i = minus = result = boolean = 0;
-	minus = -1;
-	while (s[i] != '\0')
+	index = 0;
+	res = 0;
+	while (*(s + index) != '\0')
 	{
-		if (s[i] == '-')
-		minus *= -1;
-
-		if (s[i] >= '0' && s[i] <= '9')
+		now = *(s + index);
+		if (now == '-')
+		{
+			sign *= -1;
+		}
+		if (now >= '0' && now <= '9')
 	{
-		result *= 10;
-		result -= (s[i] - '0');
-		boolean = 1;
+		ind2 = index;
+		while (*(s + ind2) > 47 && *(s + ind2) < 58)
+	{
+		res = (res * 10) + *(s + ind2) - '0';
+		ind2++;
 	}
-	else if (boolean == 1)
 		break;
-		i++;
 	}
-	result *= minus;
-	return (result);
+	index++;
+	}
+	if (sign < 0)
+	res *= sign;
+	return (res);
 }
