@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
 * main - Prints all the args content
 * @argc: argument count
@@ -14,5 +15,6 @@ int main(int argc, char *argv[])
 	{
 		printf("%s\n", argv[i]);
 	}
+	
 	return (0);
 }
