@@ -1,18 +1,14 @@
-#include <stdio.h>
-#include "dog.h"
+#include <unistd.h>
 
 /**
- * main - check the code
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: Always 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
-{
-    struct dog my_dog;
 
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
